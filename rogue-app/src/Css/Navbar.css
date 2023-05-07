@@ -1,0 +1,248 @@
+/* Add your custom styles and animations */
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #ff0000;
+} */
+
+/* .icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon img {
+  max-width: 20px;
+}
+
+.nav-icon {
+  font-size: 25px;
+  cursor: pointer;
+} */
+
+/* Mobile Styles */
+
+/* @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-icon {
+    margin-top: 10px;
+  }
+
+  .icons.open {
+    transform: translateX(0%);
+  }
+
+  .icons:not(.open) {
+    transform: translateX(-100%);
+  }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+li {
+  list-style: none;
+}
+.navbar {
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  background: black;
+  height: 13vh;
+  /* line-height: 10vh; */
+  box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #013220;
+}
+.logo {
+  /* font-size: 30px; */
+  margin-left: 1em;
+  width: 12em;
+}
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+}
+.icons .icon {
+  margin-left: 40px;
+}
+.icon svg {
+  color: white;
+}
+
+.nav-links li {
+  color: white;
+  font-size: 18px;
+  padding: 0 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-links > :first-child > li {
+  background: #aaa;
+  color: black;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 0;
+  padding: 0 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+  /* border-bottom: 1px solid black; */
+  /* border-radius: 30px; */
+}
+
+.nav-links li:hover {
+  /* scale: 1.22;
+  color: #013220;
+  visibility: visible;
+  opacity: 0.8;
+  */
+  border-bottom: 1px solid white;
+
+  transition: all 0.3s ease;
+}
+.icon:hover {
+  scale: 1.5;
+}
+
+.nav-links li:hover:after {
+  -webkit-animation: circle 1.5s ease-in forwards;
+}
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+.icons {
+  display: flex;
+  margin-right: 5px;
+}
+.nav-links Link {
+  text-decoration: none;
+}
+button {
+  border: none;
+  background: none;
+  font-size: 20px;
+}
+.mobile-menu-icon {
+  display: none;
+  background: none;
+}
+
+/* responsive for navigation */
+
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 60px;
+    width: 8rem;
+  }
+  .nav-links li {
+    display: none;
+  }
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+    left: 0;
+    top: 100%;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    background: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .icons {
+    display: flex;
+    margin-right: 10px;
+  }
+  .icons .icon {
+    margin-left: 30px;
+  }
+  .nav-links-mobile li {
+    color: #171717;
+  }
+  ul li {
+    padding: 25px 32px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+  }
+  .mobile-menu-icon {
+    position: absolute;
+    display: block;
+    left: 20px;
+    color: white;
+  }
+}
